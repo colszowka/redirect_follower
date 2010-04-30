@@ -29,6 +29,10 @@ class TestRedirectFollower < Test::Unit::TestCase
     end
   end
   
+  should "raise RedirectFollower::TooManyRedirects when calling RedirectFollower('http://bit.ly/aRmOtk', 1)" do
+    assert_raise(RedirectFollower::TooManyRedirects) { RedirectFollower('http://bit.ly/aRmOtk', 1) }
+  end
+  
   context "A new RedirectFollower instance initialized with 'http://bit.ly/aRmOtk' and a limit of 1" do
     setup { @redirect = RedirectFollower.new('http://bit.ly/aRmOtk', 1)}
     
