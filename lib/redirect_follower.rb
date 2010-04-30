@@ -4,8 +4,8 @@ require 'net/http'
 # Shorthand for RedirectFollower.new(url).resolve.url - just get the
 # destination url for given url
 #
-def RedirectFollower(url)
-  RedirectFollower.new(url).url
+def RedirectFollower(url, limit=5)
+  RedirectFollower.new(url, limit).url
 end
 
 #

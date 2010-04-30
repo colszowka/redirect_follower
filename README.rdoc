@@ -28,6 +28,15 @@ Then, either shorthand for the destination url only or for the full response:
   > redirect.response
   => # Full response object from Net::HTTP
   
+Limiting the amount of redirects can be achieved by giving a second parameter to either
+methods:
+
+<code>RedirectFollower('http://is.gd/bNZYZ', 2)</code> will only follow two redirects before
+raising <code>RedirectFollower::TooManyRedirects</code>. Same thing for 
+<code>RedirectFollower.new('http://is.gd/bNZYZ', 2)</code>. The default amount of redirects
+is 5.
+
+You can also check out my introductory blog post at http://colszowka.heroku.com/2010/04/30/redirectfollower-rubygem
 
 == Note on Patches/Pull Requests
  
