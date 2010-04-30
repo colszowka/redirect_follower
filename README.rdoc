@@ -5,7 +5,7 @@ out their destination url as well as the body.
 
 The code is mostly ripped from John Nunemaker's blog post "Following Redirects with Net/HTTP"
 (http://railstips.org/blog/archives/2009/03/04/following-redirects-with-nethttp/), but wrapped 
-into a Rubygem
+into a Rubygem and with automatic resolving
 
 Install with:
 

@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/redirect_follower.rb",
+     "redirect_follower.gemspec",
      "test/helper.rb",
      "test/test_redirect_follower.rb"
   ]
