@@ -5,11 +5,11 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "redirect_follower"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = ""christoph at olszowka de"
+    gem.summary = %Q{Find out the destination of redirecting urls with Net::HTTP}
+    gem.description = %Q{Allows you to resolve redirecting urls (i.e. from url-shortening services like bit.ly) and find out their destination url as well as the body.}
+    gem.email = "christoph at olszowka de"
     gem.homepage = "http://github.com/colszowka/redirect_follower"
-    gem.authors = [""Christoph Olszowka"]
+    gem.authors = ["Christoph Olszowka"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end

@@ -18,13 +18,13 @@ Then, either shorthand for the destination url only or for the full response:
   > RedirectFollower('http://is.gd/bNZYZ') # Just find out the destination url
   => 'http://www.taschen.com/pages/en/catalogue/classics/all/06724/facts.byrne_six_books_of_euclid.htm'
 
-  > redirect = RedirectFollower.new('http://is.gd/bNZYZ').resolve
+  > redirect = RedirectFollower.new('http://is.gd/bNZYZ')
   > redirect.url 
   => 'http://www.taschen.com/pages/en/catalogue/classics/all/06724/facts.byrne_six_books_of_euclid.htm'
   > redirect.body
   => 'a load of html...'
   > redirect.response.body 
-  => 'a load of html...' # Same as above
+  => 'a load of html...' # Same as redirect.body
   > redirect.response
   => # Full response object from Net::HTTP
   
