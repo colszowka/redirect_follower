@@ -1,6 +1,33 @@
-= redirect_follower
+= RedirectFollower
 
-Description goes here.
+Allows you to resolve redirecting urls (i.e. from url-shortening services like bit.ly) and find
+out their destination url as well as the body.
+
+The code is mostly ripped from John Nunemaker's blog post "Following Redirects with Net/HTTP"
+(http://railstips.org/blog/archives/2009/03/04/following-redirects-with-nethttp/), but wrapped 
+into a Rubygem
+
+Install with:
+
+  gem install redirect_follower
+  
+Then, either shorthand for the destination url only or for the full response:
+
+  $ irb
+  > require 'redirect_follower'
+  > RedirectFollower('http://is.gd/bNZYZ') # Just find out the destination url
+  => 'http://www.taschen.com/pages/en/catalogue/classics/all/06724/facts.byrne_six_books_of_euclid.htm'
+
+  > redirect = RedirectFollower.new('http://is.gd/bNZYZ').resolve
+  > redirect.url 
+  => 'http://www.taschen.com/pages/en/catalogue/classics/all/06724/facts.byrne_six_books_of_euclid.htm'
+  > redirect.body
+  => 'a load of html...'
+  > redirect.response.body 
+  => 'a load of html...' # Same as above
+  > redirect.response
+  => # Full response object from Net::HTTP
+  
 
 == Note on Patches/Pull Requests
  
@@ -14,4 +41,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 "Christoph. See LICENSE for details.
+Copyright (c) 2010 Christoph Olszowka. See LICENSE for details.
